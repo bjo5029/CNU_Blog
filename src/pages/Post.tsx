@@ -1,5 +1,4 @@
 // import { useEffect, useState } from 'react';
-// eslint-disable-next-line import/named
 import { useParams, Link, Params } from 'react-router-dom';
 import styled from '@emotion/styled';
 // import { deletePostById, getPostById } from '../api';
@@ -8,7 +7,6 @@ import NotFound from '../components/NotFound';
 import Tag from '../components/Tag';
 import useGetPostById from '../queries/useGetPostById';
 import useDeletePostById from '../queries/useDeletePostById';
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, Key } from 'react';
 
 const Title = styled.h1`
   font-size: 3rem;
@@ -126,24 +124,9 @@ const Post = () => {
         )}
       </div>
       <ContentsArea>
-        {post?.contents
-          ?.split('\n')
-          .map(
-            (
-              text:
-                | string
-                | number
-                | boolean
-                | ReactElement<any, string | JSXElementConstructor<any>>
-                | ReactFragment
-                | ReactPortal
-                | null
-                | undefined,
-              index: Key | null | undefined,
-            ) => (
-              <Text key={index}>{text}</Text>
-            ),
-          )}
+        {post?.contents?.split('\n').map((text, index) => (
+          <Text key={index}>{text}</Text>
+        ))}
       </ContentsArea>
     </div>
   );
