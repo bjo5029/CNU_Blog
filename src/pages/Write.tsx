@@ -1,9 +1,7 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { TAG } from '../api/types';
-import { HttpProxy } from 'vite';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { createPost, getPostById, updatePostById } from '../api';
 import useGetPostById from '../queries/useGetPostById.ts';
 import useCreatPost from '../queries/useCreatPost.ts';
 import useUpdatePostById from '../queries/useUpdatePostById.ts';

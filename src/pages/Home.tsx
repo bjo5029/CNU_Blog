@@ -1,7 +1,6 @@
 // import React, { useEffect, useState } from 'react';
 // import { getPostList } from '../api';
 import PostListItem from '../components/PostListItem';
-import { IPost, IResponsePostList, TAG } from '../api/types';
 import NoPostList from '../components/NoPostList';
 import useGetPostList from '../queries/useGetPostList';
 
@@ -27,7 +26,7 @@ const Home = () => {
   //   fetchPostList();
   // }, []);
 
-  if (postList.length === 0) {
+  if (postList.length === 0 || isError) {
     return <NoPostList />;
   }
 

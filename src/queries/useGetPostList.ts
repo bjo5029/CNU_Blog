@@ -1,4 +1,4 @@
-import { getPostById, getPostList } from '../api';
+import { getPostList } from '../api';
 import { useQuery } from '@tanstack/react-query';
 
 const useGetPostList = () => {
