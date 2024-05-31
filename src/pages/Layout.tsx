@@ -64,7 +64,7 @@ const Layout = () => {
         </div>
         <div>
           <Name>백정은</Name>
-          <Description>설명</Description>
+          <Description>백정은입니다</Description>
         </div>
       </Profile>
       <Nav>
